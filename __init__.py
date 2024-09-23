@@ -30,9 +30,28 @@ class _mockbrython1(dict):
 
 """
 
+
+
+
+from _collections_abc import dict_values
+from typing import Any, Callable
+from .html import EV
+class ClassList():
+    def add(self, cls: str) -> None:
+        pass
+
+    def remove(self, cls: str) -> None:
+        pass
+
+
+class Query():
+    def getvalue(self) -> Any:
+        pass
+
+
 class _mockbrython(dict):
     def __init__(self, *args, **kwargs):
-        self.style = self #_mockbrython1()
+        self.style = self  # _mockbrython1()
         self.args = args
         self.kwargs = kwargs
         for k, v in kwargs.items():
@@ -87,8 +106,39 @@ class _mockbrython(dict):
     def __hash__(self):
         return 0
 
+    def bind(self, event_str: str, func: Callable[[EV], Any]):
+        pass
+
+    def unbind(self, event_str: str, func: Callable[[EV], Any]):
+        pass
+
+    @property
+    def value(self) -> Any:
+        pass
+
+    @property
+    def text(self) -> Any:
+        pass
+
+    @property
+    def classList(self) -> ClassList:
+        pass
+
+    @property
+    def children(self) -> list['_mockbrython']:
+        pass
+
+    @property
+    def query(self) -> Query:
+        pass
+
+    @property
+    def createElement(self) -> '_mockbrython':
+        pass
+
 
 document = _mockbrython()
+doc = _mockbrython()
 
 
 def alert(*args, **kwargs):
@@ -111,6 +161,10 @@ def bind(target, evt):
 self = _mockbrython()
 
 
+class DOMEvent:
+    def __init__(self, id):
+        self.currentTarget = _mockbrython(id=id)
+        self.target = _mockbrython(id=id)
 
-
-
+    def preventDefault(self):
+        pass

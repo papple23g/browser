@@ -1,4 +1,5 @@
 from browser.html import _mockbrython
+
 Ajax = _mockbrython
 
 
@@ -16,4 +17,3 @@ def post(url, blocking=False, headers={"Content-Type": "application/x-www-form-u
 
 def file_upload(url, file, method="POST", field_name="filetosave", **callbacks):
     return _mockbrython()
-

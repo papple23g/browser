@@ -10,5 +10,3 @@ class ObjectStorage(dict):
 
     def __setitem__(self, attr, value):
         pass
-
-

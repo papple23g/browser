@@ -11,5 +11,3 @@ def EntryDialog(title, message=None, *, top=None, left=None, default_css=True, o
 
 def Dialog(title, *, top=None, left=None, default_css=True, ok_cancel=False):
     return _mockbrython()
-
-

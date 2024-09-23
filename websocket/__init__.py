@@ -2,6 +2,7 @@ from browser import _mockbrython
 
 supported = True
 
+
 class _Websocket():
     def bind(self, evt, function):
         pass
@@ -15,5 +16,3 @@ class _Websocket():
 
 def WebSocket(host):
     return _Websocket()
-
-
