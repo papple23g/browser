@@ -33,7 +33,6 @@ class _mockbrython1(dict):
 
 
 
-from _collections_abc import dict_values
 from typing import Any, Callable
 from .html import EV
 class ClassList():
@@ -73,14 +72,14 @@ class _mockbrython(dict):
             except where the other operand is an int when we return a zero
         """
 
-        if type(other) == _mockbrython:
+        if type(other) is _mockbrython:
             return self
         else:
             return 0
 
     def __radd__(self, other):
         """ and make symmetric """
-        if type(other) == _mockbrython:
+        if type(other) is _mockbrython:
             return self
         else:
             return 0
