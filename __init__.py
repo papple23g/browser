@@ -45,7 +45,10 @@ class ClassList():
 
 
 class Query():
-    def getvalue(self) -> Any:
+    def getlist(self, key: str, default=None) -> list[str]:
+        pass
+
+    def getvalue(self, key: str, default=None) -> Any:
         pass
 
 
